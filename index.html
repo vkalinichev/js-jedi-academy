@@ -21,22 +21,43 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">JS Academy</a>
+                <a class="navbar-brand" href="#">JS Jedi academy</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#!/">Page 0</a></li>
-                    <li><a href="#!/page1">Page 1</a></li>
-                    <li><a href="#!/page2">Page 2</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#lesson1">Lesson #1</a></li>
+                    <li><a href="#lesson2">Lesson #2</a></li>
+                    <li><a>...</a></li>
+                    <li><a>Lesson #N</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div id="page0" class="g-view hidden">Page 0</div>
-        <div id="page1" class="g-view hidden">Page 1</div>
-        <div id="page2" class="g-view hidden">Page 2</div>
+        <div id="home" class="g-view hidden">
+            <div class="jumbotron">
+                <h1>Hi</h1>
+            </div>
+        </div>
+
+        <div id="lesson1" class="g-view hidden">
+                <h1>Lesson #1</h1>
+            <div class="jumbotron">
+                <button class="btn btn-default">Initialize</button>
+            </div>
+        </div>
+
+        <div id="lesson2" class="g-view hidden">
+            <h1>Lesson #2</h1>
+        </div>
+
+        <div id="page2" class="g-view hidden">
+            <div class="jumbotron">
+                <h2>Page 2</h2>
+            </div>
+        </div>
     </div>
 
     <script data-main="app" src="bower_components/requirejs/require.js" async="async"></script>

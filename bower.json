@@ -1,0 +1,31 @@
+{
+  "name": "js-jedi-academy",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wrumly/js-jedi-academy",
+  "authors": [
+    "wrumly"
+  ],
+  "description": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.3",
+    "require": "*",
+    "requirejs": "~2.1.17"
+  }
+}
