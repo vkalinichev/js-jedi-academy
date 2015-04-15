@@ -7,6 +7,7 @@
     <title>JS Academy</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/lesson1.css">
 </head>
 
 <body role="document">
@@ -36,24 +37,44 @@
     </nav>
 
     <div class="container">
-        <div id="home" class="g-view hidden">
+        <div id="home" class="js-view hidden">
             <div class="jumbotron">
                 <h1>Hi</h1>
             </div>
         </div>
 
-        <div id="lesson1" class="g-view hidden">
-                <h1>Lesson #1</h1>
+        <div id="lesson1" class="js-view hidden">
+            <h1>Lesson #1</h1>
+
+            <div class="alert alert-info">You can see the buttons below</div>
+
             <div class="jumbotron">
-                <button class="btn btn-default">Initialize</button>
+                <div class="controls form-inline">
+                    <div class="form-group">
+                        <label for="menu_name">El Name</label>
+                        <input type="text" class="form-control js-form-menu-name" id="menu_name"
+                               placeholder="El Super Menu" value="Super Menu">
+                    </div>
+                </div>
+                <div class="controls form">
+                    <button class="btn btn-primary js-initialize">Initialize</button>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Testing ground</div>
+                    <div class="panel-body ground js-ground">
+
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <div id="lesson2" class="g-view hidden">
+        <div id="lesson2" class="js-view hidden">
             <h1>Lesson #2</h1>
         </div>
 
-        <div id="page2" class="g-view hidden">
+        <div id="page2" class="js-view hidden">
             <div class="jumbotron">
                 <h2>Page 2</h2>
             </div>

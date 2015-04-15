@@ -11,21 +11,21 @@ define(
             },
 
             home: function () {
-                $(".g-view").addClass('hidden');
+                $(".js-view").addClass('hidden');
                 $("#home").removeClass('hidden');
                 $('nav li').removeClass('active');
-                $('nav li a[href=\"' + location.hash + '\"]').closest('li').addClass('active');
+                $('nav li a[href=\"' + (location.hash.length > 0 ? location.hash : "#home") + '\"]').closest('li').addClass('active');
             },
 
             lesson1: function () {
-                $(".g-view").addClass('hidden');
+                $(".js-view").addClass('hidden');
                 $("#lesson1").removeClass('hidden');
                 $('nav li').removeClass('active');
                 $('nav li a[href=\"' + location.hash + '\"]').closest('li').addClass('active');
             },
 
             lesson2: function () {
-                $(".g-view").addClass('hidden');
+                $(".js-view").addClass('hidden');
                 $("#lesson2").removeClass('hidden');
                 $('nav li').removeClass('active');
                 $('nav li a[href=\"' + location.hash + '\"]').closest('li').addClass('active');
