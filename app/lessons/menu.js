@@ -4,7 +4,7 @@ define(
     function($) {
         window.Menu = function (name, elements) {
             this.name = name || "Menu";
-            this.elements = elements || {};
+            this.elements = elements || [{elName: 'El Pusto!', elLink: 'http://goo.gl/OmdSQD'}];
         };
 
         Menu.prototype.render = function () {
