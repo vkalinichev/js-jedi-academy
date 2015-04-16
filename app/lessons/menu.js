@@ -2,9 +2,15 @@ define(
     ["jquery"],
 
     function($) {
-        window.Menu = function (name, elements) {
-            this.name = name || "Menu";
-            this.elements = elements || [{elName: 'El Pusto!', elLink: 'http://goo.gl/OmdSQD'}];
+        var Menu = function (options) {
+            var defaults = {
+                name: "Simple Menu",
+                elements: [{
+                    elName: 'El Pusto!', elLink: 'http://goo.gl/OmdSQD'
+                }]
+
+            };
+            $.extend(this, defaults, options);
         };
 
         Menu.prototype.render = function () {
@@ -38,7 +44,7 @@ define(
                         href: elements[i].elLink,
                         title: elements[i].elName
                     }).text(elements[i].elName);
-                    console.log($link);
+
                     var $li = $('<li/>').html($link);
 
                 }

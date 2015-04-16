@@ -18,14 +18,16 @@ requirejs(["app/main", "app/router", "lessons/menu"], function (main, router, Me
 
     $(document)
         .on('click', '.js-initialize', function () {
-            var name = $('.js-form-menu-name').val();
-            var elements = [
-                {elName: 'El Taco', elLink: 'http://goo.gl/LcBkbd'},
-                {elName: 'El Burrito', elLink: 'http://goo.gl/bYMnrY'},
-                {elName: 'El Sambrero', elLink: 'http://goo.gl/SpuFzx'}
-            ];
+            var options = {
+                name: $('.js-form-menu-name').val(),
+                elements: [
+                    {elName: 'El Taco', elLink: 'http://goo.gl/LcBkbd'},
+                    {elName: 'El Burrito', elLink: 'http://goo.gl/bYMnrY'},
+                    {elName: 'El Sambrero', elLink: 'http://goo.gl/SpuFzx'}
+                ]
+            };
 
-            var menu = new Menu(name, elements);
+            var menu = new Menu(options);
 
             menu.render()
         })
