@@ -10,7 +10,7 @@ define(
                 }]
 
             };
-            $.extend(this, defaults, options);
+            $.extend(true, this, defaults, options);
         };
 
         Menu.prototype.render = function () {
