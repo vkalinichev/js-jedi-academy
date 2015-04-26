@@ -2,7 +2,10 @@ requirejs.config({
     baseUrl: "app",
     deps: [
         'main',
-        "app/router"
+        "app/router",
+        'lessons/lesson1',
+        'lessons/lesson2',
+        'bootstrap'
     ],
     paths: {
         "app": ".",
