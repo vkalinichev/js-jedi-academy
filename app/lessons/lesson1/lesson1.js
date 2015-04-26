@@ -1,4 +1,4 @@
-define( ["jquery", "lessons/menu"], function($, Menu) {
+define( ["jquery", "lessons/lesson1/menu"], function($, Menu) {
 
     $(document)
         .on('click', '.js-initialize', function () {

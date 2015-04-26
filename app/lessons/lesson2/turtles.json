@@ -1,0 +1,101 @@
+{
+    "results": [
+        {
+            "name": "donatello original",
+            "color": "purple ",
+            "weapon": "bo staff",
+            "photo": "https://pbs.twimg.com/media/By6WUMHCQAAZgPK.jpg:large"
+        },
+
+        {
+            "name": "leonardo original",
+            "color": "blue",
+            "weapon": "two katana",
+            "photo": "https://pbs.twimg.com/media/B9u96xTIEAEYrdm.jpg:large"
+        },
+        {
+            "name": "michelangelo original",
+            "color": "orange",
+            "weapon": "pair of nunchucks",
+            "photo": "http://mewarnai.us/images/346893-teenage-mutant-ninja-turtles-michelangelo-toy.jpg"
+        },
+        {
+            "name": "raphael original",
+            "color": "red",
+            "weapon": "pair of sai",
+            "photo": "http://media.aintitcool.com/media/uploads/2013/the_kidd_pic_database/raphael-tmnt.jpg"
+        },
+        {
+            "name": "donatello 2nd clone",
+            "color": "purple ",
+            "weapon": "bo staff",
+            "photo": "https://pbs.twimg.com/media/By6WUMHCQAAZgPK.jpg:large"
+        },
+        {
+            "name": "leonardo 2nd clone",
+            "color": "blue",
+            "weapon": "two katana",
+            "photo": "https://pbs.twimg.com/media/B9u96xTIEAEYrdm.jpg:large"
+        },
+        {
+            "name": "michelangelo 2nd clone",
+            "color": "orange",
+            "weapon": "pair of nunchucks",
+            "photo": "http://mewarnai.us/images/346893-teenage-mutant-ninja-turtles-michelangelo-toy.jpg"
+        },
+        {
+            "name": "raphael 2nd clone",
+            "color": "red",
+            "weapon": "pair of sai",
+            "photo": "http://media.aintitcool.com/media/uploads/2013/the_kidd_pic_database/raphael-tmnt.jpg"
+        },
+        {
+            "name": "donatello 3rd clone",
+            "color": "purple ",
+            "weapon": "bo staff",
+            "photo": "https://pbs.twimg.com/media/By6WUMHCQAAZgPK.jpg:large"
+        },
+        {
+            "name": "leonardo 3rd clone",
+            "color": "blue",
+            "weapon": "two katana",
+            "photo": "https://pbs.twimg.com/media/B9u96xTIEAEYrdm.jpg:large"
+        },
+        {
+            "name": "michelangelo 3rd clone",
+            "color": "orange",
+            "weapon": "pair of nunchucks",
+            "photo": "http://mewarnai.us/images/346893-teenage-mutant-ninja-turtles-michelangelo-toy.jpg"
+        },
+        {
+            "name": "raphael 3rd clone",
+            "color": "red",
+            "weapon": "pair of sai",
+            "photo": "http://media.aintitcool.com/media/uploads/2013/the_kidd_pic_database/raphael-tmnt.jpg"
+        },
+        {
+            "name": "donatello 4th clone",
+            "color": "purple ",
+            "weapon": "bo staff",
+            "photo": "https://pbs.twimg.com/media/By6WUMHCQAAZgPK.jpg:large"
+        },
+        {
+            "name": "leonardo 4th clone",
+            "color": "blue",
+            "weapon": "two katana",
+            "photo": "https://pbs.twimg.com/media/B9u96xTIEAEYrdm.jpg:large"
+        },
+        {
+            "name": "michelangelo 4th clone",
+            "color": "orange",
+            "weapon": "pair of nunchucks",
+            "photo": "http://mewarnai.us/images/346893-teenage-mutant-ninja-turtles-michelangelo-toy.jpg"
+        },
+        {
+            "name": "raphael 4th clone",
+            "color": "red",
+            "weapon": "pair of sai",
+            "photo": "http://media.aintitcool.com/media/uploads/2013/the_kidd_pic_database/raphael-tmnt.jpg"
+        }
+    ]
+}
