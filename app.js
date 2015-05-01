@@ -1,3 +1,5 @@
+"use strict";
+
 requirejs.config({
     baseUrl: "app",
     deps: [
@@ -5,7 +7,10 @@ requirejs.config({
         "router",
         'lessons/lesson1/lesson1',
         'lessons/lesson2/lesson2',
-        'bootstrap'
+        'lessons/lesson3/lesson3',
+        'bootstrap',
+        'jquery.createplugin',
+        'jquery.elmenu'
     ],
     paths: {
         "app": ".",
@@ -13,14 +18,25 @@ requirejs.config({
         "backbone":   "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min",
         "underscore": "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min",
         "bootstrap":  "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min",
-        "jquery.turtlesearcher": "lessons/lesson2/jquery.turtle-searcher"
+        "jquery.createplugin":   "lessons/lesson3/create-jq-plugin",
+        "jquery.turtlesearcher": "lessons/lesson2/jquery.turtle-searcher",
+        "jquery.elmenu":         "lessons/lesson3/jquery.elmenu"
     },
     shim: {
         "bootstrap": {
             deps: ["jquery"]
         },
+        // for lesson #2
         "jquery.turtlesearcher": {
             deps: ["jquery"]
+        },
+        // for lesson #3+
+        "jquery.createplugin": {
+            deps: ["jquery"],
+            exports: "createJQPlugin"
+        },
+        "jquery.elmenu": {
+            deps: ["jquery", "jquery.createplugin"]
         }
     }
 });

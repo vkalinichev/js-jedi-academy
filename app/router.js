@@ -7,7 +7,8 @@ define(
                 "": "home",
                 "home": "home",
                 "lesson1": "lesson1",
-                "lesson2": "lesson2"
+                "lesson2": "lesson2",
+                "lesson3": "lesson3"
             },
 
             home: function () {
@@ -27,6 +28,13 @@ define(
             lesson2: function () {
                 $(".js-view").addClass('hidden');
                 $("#lesson2").removeClass('hidden');
+                $('nav li').removeClass('active');
+                $('nav li a[href=\"' + location.hash + '\"]').closest('li').addClass('active');
+            },
+
+            lesson3: function () {
+                $(".js-view").addClass('hidden');
+                $("#lesson3").removeClass('hidden');
                 $('nav li').removeClass('active');
                 $('nav li a[href=\"' + location.hash + '\"]').closest('li').addClass('active');
             }
