@@ -1,76 +1,75 @@
-(function($, window) {
+(function($) {
 
     var Elmenu = (function() {
 
         function Elmenu ($el, options) {
             this.$el = $el;
-            this.options = $.extend(true, this.defaults, options);
+            this.options = $.extend(true, {
+                items: [{
+                    name: 'El Pusto!',
+                    link: 'http://goo.gl/OmdSQD'
+                }],
+                ns: 'elmenu-',
+                classes: {
+                    wrapper:  'wrapper',
+                    list:     'list dropdown-menu',
+                    listItem: 'li',
+                    link:     'link',
+                    open:     'open',
+                    closed:   'closed',
+                    bottom:   'bottom'
+                }
+            }, options);
 
             this.render();
+            this.bindEvents();
         }
 
-        Elmenu.prototype.defaults = {
-            items: [{
-                elName: 'El Pusto!',
-                elLink: 'http://goo.gl/OmdSQD'
-            }],
-            ns: 'elmenu',
-            classes: {
-                wrapper:  'wrapper',
-                list:     'list',
-                listItem: 'li',
-                link:     'link',
-                open:     'open',
-                closed:   'closed',
-                bottom:   'bottom'
-            }
-        };
-
         Elmenu.prototype.render = function () {
-            var $container = this.$el;
-            var o = this.options;
-            //var menu =
-            console.log();
-            var $wrapper = $('<div/>').addClass(o.ns + o.wrapper);
-            var $list    = $('<ul/>').addClass(o.ns + o.list);
+            var self = this,
+                o = self.options,
+                items_length = o.items.length,
+                $wrapper = $('<div/>').addClass(o.ns + o.classes.wrapper);
 
-            for (var i = 0, length = o.items.length; i < length; o.items) {
-                var item = o.items[i];
+            self.$wrapper = self.$el.wrap($wrapper).parent();
+            self.$list    = $('<ul/>').addClass(o.ns  + o.classes.list);
 
-                var $link = $('<a/>')
-                    .attr('href', item.elLink)
-                    .text(item.elLink);
-                var $item = $('<li>')
-                    .addClass(o.ns + o.listItem)
+            for (var i = 0, item, $link, $item; i < items_length; i++) {
+                item = o.items[i];
+
+                $link = $('<a/>')
+                    .addClass(o.ns + o.classes.link)
+                    .attr({ target: '_blank', href: item.link })
+                    .text(item.name);
+
+                $item = $('<li>')
+                    .addClass(o.ns + o.classes.listItem)
                     .append($link);
 
-                $list.append($item)
+                self.$list.append($item)
             }
 
-            $wrapper.append($list);
-            console.log($list);
-            $container.append($wrapper);
-            console.log($wrapper);
-        };
-
-        Elmenu.prototype.reRender = function () {
-
+            self.$el.after(self.$list);
         };
 
         Elmenu.prototype.showMenuItems = function () {
-
+            this.$wrapper.addClass('open');
         };
 
         Elmenu.prototype.hideMenuItems = function () {
-
-        };
-
-        Elmenu.prototype.toggleMenuItems = function () {
-
+            this.$wrapper.removeClass('open');
         };
 
         Elmenu.prototype.bindEvents = function () {
+            var self = this;
 
+            self.$el.on('click', function () {
+                if (self.$wrapper.hasClass('open')) {
+                    self.hideMenuItems();
+                } else {
+                    self.showMenuItems();
+                }
+            })
         };
 
         return Elmenu;
@@ -80,69 +79,3 @@
     return createJQPlugin(Elmenu, "elmenu");
 
 })(jQuery, window);
-
-//    Menu.prototype.render = function () {
-//
-//        var attrs = {
-//            wrapper: {
-//                class: 'menu-wrapper'
-//            },
-//            button: {
-//                class: 'btn btn-success',
-//                type: 'button'
-//            },
-//            list: {
-//                class: 'dropdown-menu'
-//            }
-//        };
-//
-//        var $container = $('.js-ground');
-//        var $wrapper = $("<div/>").attr( attrs.wrapper );
-//        var $button = $("<button/>").attr( attrs.button ).text(this.name);
-//        var $list = $("<ul/>").attr( attrs.list);
-//        var elements = this.elements;
-//        var self = this;
-//
-//        for (var i = 0; i < elements.length; i++) {
-//
-//            if (elements[i].elName.length > 0 && elements[i].elLink.length > 0) {
-//
-//                var $link = $('<a/>').attr({
-//                    target: "_blank",
-//                    href: elements[i].elLink,
-//                    title: elements[i].elName
-//                }).text(elements[i].elName);
-//
-//                var $li = $('<li/>').html($link);
-//
-//            }
-//
-//            $list.append($li);
-//        }
-//
-//        $wrapper.append($button).append($list);
-//        $container.append($wrapper);
-//
-//        this.$el     = $wrapper;
-//        this.$button = $button;
-//
-//        this.$button.on('click', function () {
-//
-//            if (self.$el.hasClass('open')) {
-//                self.hideMenuItems();
-//            } else {
-//                self.showMenuItems();
-//            }
-//        })
-//    };
-//
-//    Menu.prototype.showMenuItems = function () {
-//        this.$el.addClass('open');
-//    };
-//
-//    Menu.prototype.hideMenuItems = function () {
-//        this.$el.removeClass('open');
-//    };
-//
-//    return Menu;
-//

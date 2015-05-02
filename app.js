@@ -18,6 +18,10 @@ requirejs.config({
         "backbone":   "//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min",
         "underscore": "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min",
         "bootstrap":  "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min",
+        //"jquery":     "../bower_components/jquery/dist/jquery.min",
+        //"backbone":   "../bower_components/backbone/backbone",
+        //"underscore": "../bower_components/underscore/underscore-min",
+        //"bootstrap":  "../bower_components/bootstrap/dist/js/bootstrap.min",
         "jquery.createplugin":   "lessons/lesson3/create-jq-plugin",
         "jquery.turtlesearcher": "lessons/lesson2/jquery.turtle-searcher",
         "jquery.elmenu":         "lessons/lesson3/jquery.elmenu"
