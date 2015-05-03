@@ -1,6 +1,6 @@
 window.createJQPlugin = ( Class, name ) ->
     className = Class.toString().match(/^function ([^(]+)/)[1]
-    pluginName = className.slice(0,1).toLowerCase() + className.slice(1)
+    pluginName = name || className.slice(0,1).toLowerCase() + className.slice(1)
     dataName = name || pluginName
 
     $.fn[pluginName] = (options) ->

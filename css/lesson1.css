@@ -11,7 +11,8 @@ label {
 }
 
 .menu-wrapper,
-.elmenu-wrapper {
+.elmenu-wrapper,
+.elgrandmenu-wrapper {
     position: relative;
     display: inline-block;
 }

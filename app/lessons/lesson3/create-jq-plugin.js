@@ -3,7 +3,7 @@
   window.createJQPlugin = function(Class, name) {
     var className, dataName, pluginName;
     className = Class.toString().match(/^function ([^(]+)/)[1];
-    pluginName = className.slice(0, 1).toLowerCase() + className.slice(1);
+    pluginName = name || className.slice(0, 1).toLowerCase() + className.slice(1);
     dataName = name || pluginName;
     return $.fn[pluginName] = function(options) {
       var args;
