@@ -78,3 +78,4 @@ bower_components
 .bowerrc
 
 examples
+*.map

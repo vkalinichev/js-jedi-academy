@@ -10,7 +10,8 @@ requirejs.config({
         'lessons/lesson3/lesson3',
         'bootstrap',
         'jquery.createplugin',
-        'jquery.elmenu'
+        'jquery.elmenu',
+        'jquery.elgrandemenu'
     ],
     paths: {
         "app": ".",
@@ -24,7 +25,8 @@ requirejs.config({
         //"bootstrap":  "../bower_components/bootstrap/dist/js/bootstrap.min",
         "jquery.createplugin":   "lessons/lesson3/create-jq-plugin",
         "jquery.turtlesearcher": "lessons/lesson2/jquery.turtle-searcher",
-        "jquery.elmenu":         "lessons/lesson3/jquery.elmenu"
+        "jquery.elmenu":         "lessons/lesson3/jquery.elmenu",
+        "jquery.elgrandemenu":         "lessons/lesson3/jquery.elgrandemenu"
     },
     shim: {
         "bootstrap": {
@@ -41,6 +43,9 @@ requirejs.config({
         },
         "jquery.elmenu": {
             deps: ["jquery", "jquery.createplugin"]
+        },
+        "jquery.elgrandemenu": {
+            deps: ["jquery", "jquery.createplugin", "jquery.elmenu"]
         }
     }
 });

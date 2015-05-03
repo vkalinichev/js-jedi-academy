@@ -14,10 +14,13 @@ label {
 .elmenu-wrapper {
     position: relative;
     display: inline-block;
-    margin: 8px;
 }
 
 .form-control {
     font-weight: normal;
-    /*ac*/
+}
+
+
+.btn {
+    outline: none !important;
 }
