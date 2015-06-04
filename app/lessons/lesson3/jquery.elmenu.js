@@ -20,29 +20,30 @@
         items: [
           {
             name: 'El Pusto!',
-            link: 'http://goo.gl/OmdSQD'
+            link: 'https://goo.gl/hhCpGe'
           }
         ]
       };
 
       function Elmenu($el, options) {
         this.$el = $el;
-        this.options = $.extend(true, this.defaults, options);
+        console.log(this.defaults.items.length);
+        this.options = $.extend(true, {}, this.defaults, options);
+        console.log(this.defaults.items.length);
         this.render();
         this.bindEvents();
       }
 
       Elmenu.prototype.render = function() {
-        var $wrapper, i, item, j, len, o, ref, self;
+        var $wrapper, i, item, j, len, ref, self;
         self = this;
-        o = this.options;
-        $wrapper = $('<div/>').addClass(this.ns(o.classes.wrapper));
+        $wrapper = $('<div/>').addClass(this.ns('wrapper'));
         this.$wrapper = this.$el.wrap($wrapper).parent();
-        this.$list = $('<ul/>').addClass(this.ns(o.classes.list));
-        ref = o.items;
+        this.$list = $('<ul/>').addClass(this.ns('list'));
+        ref = this.options.items;
         for (i = j = 0, len = ref.length; j < len; i = ++j) {
           item = ref[i];
-          self.$list.append($('<li/>').addClass(this.ns(o.classes.listItem)).append($('<a/>').addClass(this.ns(o.classes.link)).attr({
+          self.$list.append($('<li/>').addClass(this.ns('listItem')).append($('<a/>').addClass(this.ns('link')).attr({
             target: '_blank',
             href: item.link
           }).text(item.name)));
@@ -51,10 +52,13 @@
       };
 
       Elmenu.prototype.ns = function(str) {
-        return [this.options.ns, str].join('-');
+        if (this.options.classes[str]) {
+          return [this.options.ns, this.options.classes[str]].join('-');
+        }
       };
 
       Elmenu.prototype.showMenuItems = function() {
+        console.log(this);
         return this.$wrapper.addClass('open');
       };
 
@@ -82,7 +86,7 @@
       extend(ElGrandMenu, superClass);
 
       function ElGrandMenu($el, options) {
-        options = $.extend(true, this.defaults, {
+        options = $.extend(true, {}, this.defaults, {
           ns: 'elgrandmenu',
           items: [
             {

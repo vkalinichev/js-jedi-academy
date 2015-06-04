@@ -14,31 +14,32 @@
                 bottom:   'bottom'
             items: [
                 name: 'El Pusto!'
-                link: 'http://goo.gl/OmdSQD'
+                link: 'https://goo.gl/hhCpGe'
             ]
 
         constructor: ($el, options) ->
             @$el = $el
-            @options = $.extend true, @defaults, options
+            console.log( @defaults.items.length )
+            @options = $.extend true, {}, @defaults, options
+            console.log( @defaults.items.length )
             @render()
             @bindEvents()
 
 
         render: () ->
             self = @
-            o = @options
-            $wrapper = $('<div/>').addClass @ns o.classes.wrapper
+            $wrapper = $('<div/>').addClass @ns 'wrapper'
 
             @$wrapper = @$el.wrap($wrapper).parent()
-            @$list    = $('<ul/>').addClass @ns o.classes.list
+            @$list    = $('<ul/>').addClass @ns 'list'
 
-            for item, i in o.items
+            for item, i in @options.items
                 self.$list.append (
                     $('<li/>')
-                        .addClass @ns o.classes.listItem
+                        .addClass @ns 'listItem'
                         .append (
                             $('<a/>')
-                                .addClass @ns o.classes.link
+                                .addClass @ns 'link'
                                 .attr
                                     target: '_blank'
                                     href: item.link
@@ -49,9 +50,11 @@
             @$el.after @$list
 
         ns: (str) ->
-            [@options.ns, str].join '-'
+            if @options.classes[str]
+                [@options.ns, @options.classes[str]].join '-'
 
         showMenuItems: () ->
+            console.log @
             @$wrapper.addClass 'open'
 
 
@@ -80,7 +83,7 @@
     class ElGrandMenu extends Elmenu
 
         constructor: ($el, options) ->
-            options = $.extend true, @defaults,
+            options = $.extend true, {}, @defaults,
                 ns: 'elgrandmenu'
                 items: [
                     name: 'El Sovsem Pusto!'

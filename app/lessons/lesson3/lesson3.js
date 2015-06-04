@@ -5,30 +5,32 @@
       items: [
         {
           name: 'El Taco',
-          link: 'http://goo.gl/LcBkbd'
+          link: 'https://goo.gl/LcBkbd'
         }, {
           name: 'El Burrito',
-          link: 'http://goo.gl/bYMnrY'
+          link: 'https://goo.gl/bYMnrY'
         }, {
           name: 'El Sambrero',
-          link: 'http://goo.gl/SpuFzx'
+          link: 'https://goo.gl/SpuFzx'
         }
       ]
     });
-    return $('.js-elgrandmenu').elgrandmenu({
+    $('.js-elgrandmenu').elgrandmenu({
       items: [
         {
           name: 'El Grand Taco',
-          link: 'http://goo.gl/AYQcS4'
+          link: 'https://goo.gl/wp0c4F'
         }, {
           name: 'El Grand Burrito',
-          link: 'http://goo.gl/wp0c4F'
+          link: 'https://goo.gl/fME8Kg'
         }, {
           name: 'El Grand Sambrero',
-          link: 'http://goo.gl/hXmiJn'
+          link: 'https://goo.gl/hXmiJn'
         }
       ]
     });
+    $('.js-elgrandnone').elmenu();
+    return false;
   });
 
 }).call(this);
